@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: telegram-bot-webhook
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python botv1.py
+    envVars:
+      - key: PORT
+        value: 10000
